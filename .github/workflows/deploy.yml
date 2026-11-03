@@ -22,4 +22,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.156.2"
           command: pages deploy site --project-name=vighnajith --branch=main --commit-dirty=true
