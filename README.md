@@ -13,7 +13,7 @@ film/   source of the 60 s motion-graphics video (canvas film, rendered from cod
 
 ## Deploy on Cloudflare Pages
 
-The live Pages project `vighnajith` is a direct-upload project (not Git-connected). Deploy from the repo root:
+The live Pages project `vighnajith` is a direct-upload project (Cloudflare cannot convert it to Git-connected). Every push to `main` deploys `site/` via [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which needs the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. To deploy by hand from the repo root:
 
 ```
 CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... npx wrangler pages deploy site --project-name vighnajith --branch main
